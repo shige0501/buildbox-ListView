@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,5 +24,10 @@ class MainActivity : AppCompatActivity() {
 
         val listView: ListView = findViewById(R.id.list_view)
         listView.adapter = adapter
+
+        listView.setOnItemClickListener { adapterView, _, position, _ ->
+            val pokemonName = adapterView.getItemAtPosition(position) as String
+            Toast.makeText(this, "$pokemonName が現れた！", Toast.LENGTH_SHORT).show()
+        }
     }
 }
