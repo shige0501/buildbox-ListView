@@ -16,11 +16,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initializeListView() {
-            val language = listOf("フシギダネ", "フシギソウ", "フシギバナ",
+        val pokemonNames = listOf("フシギダネ", "フシギソウ", "フシギバナ",
                 "メガフシギバナ", "ヒトカゲ", "リザード", "リザードン", "メガリザードンX",
                 "メガリザードンY", "ゼニガメ", "カメール", "カメックス", "メガカメックス", "キャタピー",
                 "トランセル", "バタフリー", "メガスピアー", "ポッポ")
-            val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, language)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, pokemonNames)
 
         val listView: ListView = findViewById(R.id.list_view)
         listView.adapter = adapter
